@@ -1,2 +1,13 @@
 
 .idea/vcs.xml
+*.pyc
+venv/Lib/site-packages/beautifulsoup4-4.9.1.dist-info/AUTHORS
+*.json
+*.pem
+*.rst
+*.so
+*.xpi
+*.js
+*.md
+*.txt
+*.exe
