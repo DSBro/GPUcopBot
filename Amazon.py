@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 class Amazon:
     def __init__(self):
         options = Options()
-        options.add_argument("user-data-dir=C:/Users/Cindy/AppData/Local/Google/Chrome/User Data/")
+        options.add_argument("user-data-dir=C:/Users/cbass/AppData/Local/Google/Chrome/User Data/")
         #options.add_argument("profile-directory=Profile 1")
         self.site = "https://www.amazon.com/stores/GeForce/RTX3080_GEFORCERTX30SERIES/page/6B204EA4-AAAC-4776-82B1-D7C3BD9DDC82"
         self.driver = webdriver.Chrome(options=options)
@@ -23,11 +23,11 @@ class Amazon:
 
     def buyItem(self):
         self.driver.get('https://www.amazon.com/gp/cart/view.html?ref_=nav_cart')
-        self.driver.find_element_by_name('proceedToRetailCheckout').click()
+        #self.driver.find_element_by_name('proceedToRetailCheckout').click()
         #address
-        self.driver.find_element_by_id("orderSummaryPrimaryActionBtn-announce").click()
+        #self.driver.find_element_by_id("orderSummaryPrimaryActionBtn-announce").click()
         #credit card
-        self.driver.find_element_by_id("orderSummaryPrimaryActionBtn-announce").click()
+        #self.driver.find_element_by_id("orderSummaryPrimaryActionBtn-announce").click()
         #buy
         self.driver.find_element_by_id("submitOrderButtonId-announce").click()
         print("Purchased!")
