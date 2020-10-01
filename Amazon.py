@@ -9,7 +9,7 @@ class Amazon:
         options = Options()
         options.add_argument("user-data-dir=C:/Users/cbass/AppData/Local/Google/Chrome/User Data/")
         #options.add_argument("profile-directory=Profile 1")
-        self.site = "https://www.amazon.com/stores/GeForce/RTX3080_GEFORCERTX30SERIES/page/6B204EA4-AAAC-4776-82B1-D7C3BD9DDC82"
+        self.site = "https://www.amazon.com/stores/page/CFF83A4D-9DEC-4003-AC7E-96DF4170CED0?ingress=0&visitId=158b1f34-0594-496b-b609-a1a5d0754bb0"
         self.driver = webdriver.Chrome(options=options)
 
     def checkStock(self):
