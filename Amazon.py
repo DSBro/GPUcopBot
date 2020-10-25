@@ -9,16 +9,16 @@ class Amazon:
         options = Options()
         options.add_argument("user-data-dir=C:/Users/cbass/AppData/Local/Google/Chrome/User Data/")
         #options.add_argument("profile-directory=Profile 1")
-        self.site = "https://www.amazon.com/stores/page/CFF83A4D-9DEC-4003-AC7E-96DF4170CED0?ingress=0&visitId=158b1f34-0594-496b-b609-a1a5d0754bb0"
+        self.site = "https://www.amazon.com/EVGA-10G-P5-3897-KR-GeForce-Technology-Backplate/dp/B08HR3Y5GQ?ref_=ast_sto_dp"
         self.driver = webdriver.Chrome(options=options)
 
     def checkStock(self):
         self.driver.get(self.site)
-        arr = self.driver.find_elements_by_css_selector('button.style__addToCartBtn__nOP_z')
+        arr = self.driver.find_elements_by_id('add-to-cart-button')
         while not arr:
             arr = self.driver.find_elements_by_css_selector('button.style__addToCartBtn__nOP_z')
             self.driver.refresh()
-            time.sleep(60)
+            time.sleep(100000)
         arr[0].click()
 
     def buyItem(self):
