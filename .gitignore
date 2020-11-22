@@ -11,3 +11,4 @@ venv/Lib/site-packages/beautifulsoup4-4.9.1.dist-info/AUTHORS
 *.md
 *.txt
 *.exe
+.idea/workspace.xml

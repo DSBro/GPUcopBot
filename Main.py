@@ -1,9 +1,9 @@
 from Amazon import Amazon
-from Newegg import Newegg
+from Zotac import Zotac
+import time
 def main():
-    x = Amazon()
-    x.login()
-    x.checkStock()
-    x.buyItem()
+    x = Zotac()
+    while not x.any_in_stock():
+        time.sleep(60)
 if __name__ == "__main__":
     main()
